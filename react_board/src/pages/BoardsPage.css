@@ -1,0 +1,236 @@
+.boards-page {
+  min-height: calc(100vh - 64px);
+  background: #f8fafc;
+  padding: 40px 20px;
+}
+
+.boards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.boards-header {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boards-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.boards-header h1::before {
+  content: '📋';
+  font-size: 24px;
+}
+
+.create-board-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.create-board-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+.create-board-btn::before {
+  content: '➕';
+  font-size: 12px;
+}
+
+.boards-stats {
+  background: white;
+  padding: 20px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  margin-bottom: 24px;
+}
+
+.boards-stats p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 14px;
+}
+
+.boards-stats strong {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.boards-table-container {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.boards-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.boards-table th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.boards-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #4a5568;
+  font-size: 14px;
+}
+
+.board-row:hover {
+  background: #f7fafc;
+}
+
+.board-id {
+  font-weight: 600;
+  color: #3182ce;
+}
+
+.board-name {
+  font-weight: 500;
+}
+
+.board-date {
+  color: #718096;
+  font-size: 13px;
+}
+
+.board-status {
+  text-align: center;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.status-badge.active {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+}
+
+.status-badge.deleted {
+  background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+}
+
+.board-actions {
+  text-align: center;
+}
+
+.action-btn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+  color: white;
+}
+
+.delete-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(245, 101, 101, 0.3);
+}
+
+.restore-btn {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  color: white;
+}
+
+.restore-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(66, 153, 225, 0.3);
+}
+
+.no-boards {
+  text-align: center;
+  color: #718096;
+  font-style: italic;
+  padding: 60px 40px;
+  font-size: 16px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: #718096;
+}
+
+@media (max-width: 768px) {
+  .boards-page {
+    padding: 20px 10px;
+  }
+
+  .boards-header {
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .boards-header h1 {
+    text-align: center;
+  }
+
+  .boards-stats {
+    padding: 16px 20px;
+  }
+
+  .boards-table {
+    font-size: 12px;
+  }
+
+  .boards-table th,
+  .boards-table td {
+    padding: 8px 6px;
+  }
+
+  .action-btn {
+    padding: 4px 12px;
+    font-size: 11px;
+  }
+}
